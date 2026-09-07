@@ -29,109 +29,154 @@ Unlike simple wrapper chatbots, VoyageAI combines **Hybrid Search (Dense Vector 
 
 ## 🏛️ System Architecture
 
+VoyageAI is organized into **4 clean modular layers** ensuring clear separation of concerns between ingestion, security, retrieval intelligence, and presentation.
+
 ```mermaid
-flowchart TD
-    subgraph INGESTION["Knowledge Ingestion Pipeline (Offline / Scheduled)"]
-        A[Official Source Registry] --> B1[Web Scraper: Playwright / Requests]
-        A --> B2[PDF Extractor: pypdf]
-        B1 --> C[Text Normalization & Cleaner]
-        B2 --> C
-        C --> D[Travel Metadata Extractor]
-        D --> E[Semantic Text Splitter]
-        E --> F1[BM25Okapi Indexer]
-        E --> F2[FAISS Vector Store: Embeddings]
+flowchart TB
+    %% Styling definitions
+    classDef client fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef security fill:#450a0a,stroke:#f87171,stroke-width:2px,color:#fef2f2;
+    classDef nlp fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#f8fafc;
+    classDef rag fill:#022c22,stroke:#34d399,stroke-width:2px,color:#f0fdf4;
+    classDef llm fill:#3b0764,stroke:#c084fc,stroke-width:2px,color:#faf5ff;
+    classDef data fill:#1c1917,stroke:#fbbf24,stroke-width:2px,color:#fefce8;
+
+    subgraph L1["1. User & Client Interface Layer"]
+        UI["🖥️ Streamlit Premium UI<br><i>Live Streaming • Trip Cards • Readiness Gauge</i>"]:::client
+        Memory["🧠 Session Memory<br><i>Isolated Multi-Turn Store</i>"]:::client
     end
 
-    subgraph RUNTIME["Real-Time Execution Pipeline"]
-        User([User Prompt]) --> G[Input Guardrails & Injection Detector]
-        G -->|Violation / Unsafe| Refusal[Security & Policy Alert]
-        G -->|Safe / Valid| H[Query Parser & Trip Context Extractor]
-        H --> I[Hybrid Retriever: Vector 0.60 + BM25 0.30 + Lexical 0.10]
-        I --> J{Relevance Evaluator: CRAG}
-        J -->|Low Confidence / Weak| K[Query Reformulation Loop]
-        K --> I
-        J -->|High Confidence| L[Context Assembly & Grounding]
-        L --> M[LLM Streaming: GPT-4o-mini / Local Grounded]
-        M --> N[Self-RAG Grounding & Output Guardrails]
-        N --> O[Answer + Citations + Readiness Score + Why-This-Answer]
-        O --> UI[Streamlit UI Dashboard]
+    subgraph L2["2. Security & Guardrails Layer"]
+        InGuard["🛡️ Input Guardrail & Injection Detector<br><i>Threat Filtering • Domain Validation</i>"]:::security
+        OutGuard["🛡️ Output Guardrail & Self-RAG<br><i>Grounding Checker • Disclaimer Enforcement</i>"]:::security
     end
+
+    subgraph L3["3. Query & Retrieval Intelligence Layer"]
+        Parser["🧩 Query Understanding<br><i>Origin / Destination / Purpose Extraction</i>"]:::nlp
+        CRAG["🔄 Corrective RAG (CRAG) Engine<br><i>Relevance Evaluation • Self-Correction Loop</i>"]:::rag
+        Retriever["⚡ Hybrid Retriever<br><i>Dense Vector (60%) + Sparse BM25 (30%) + Lexical (10%)</i>"]:::rag
+        Readiness["📊 Readiness Calculator<br><i>5-Pillar Score (0-100%)</i>"]:::rag
+    end
+
+    subgraph L4["4. Knowledge Base & Model Layer"]
+        FAISS["📦 FAISS Vector Index<br><i>OpenAI Embeddings (1536-d)</i>"]:::data
+        BM25["📚 BM25Okapi Keyword Store<br><i>Exact Matches & Term Frequencies</i>"]:::data
+        LLM["🤖 LLM Generation Engine<br><i>OpenAI GPT-4o-mini / Local Grounded</i>"]:::llm
+    end
+
+    %% User Request Journey
+    UI -->|1. User Prompt| InGuard
+    InGuard -->|Safe Query| Parser
+    InGuard -.->|Security Violation| UI
+    
+    Parser -->|Trip Context| Memory
+    Parser -->|Structured Context| CRAG
+    
+    CRAG <-->|Hybrid Search| Retriever
+    Retriever <-->|Dense Search| FAISS
+    Retriever <-->|Keyword Search| BM25
+    
+    CRAG -->|Grounded XML Context| LLM
+    LLM -->|Streamed Output| OutGuard
+    OutGuard -->|Validated Answer + Sources| UI
+    CRAG -->|Evidence Documents| Readiness
+    Readiness -->|0-100% Score| UI
+
+    Memory -.->|Context History| Parser
 ```
 
 ---
 
 ## 🔄 End-to-End Execution Flow
 
-Here is the step-by-step lifecycle of every user query in VoyageAI:
+Every user prompt follows a clear **5-Stage Pipeline** with automated self-correction, grounding checks, and transparent source attribution.
 
 ```mermaid
-sequenceDiagram
-    autonumber
-    actor Traveler as Traveler (UI)
-    participant Guard as Input Guardrails
-    participant Parser as Query Understanding
-    participant CRAG as Corrective RAG
-    participant Retriever as Hybrid Retriever (FAISS + BM25)
-    participant LLM as LLM Generation
-    participant OutGuard as Output Guardrails & Self-RAG
-    participant Memory as Session Memory
+flowchart LR
+    %% Flow definition
+    classDef step fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef branch fill:#1f2937,stroke:#fbbf24,stroke-width:2px,color:#fefce8;
+    classDef pass fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
+    classDef reject fill:#7f1d1d,stroke:#f87171,stroke-width:2px,color:#fef2f2;
 
-    Traveler->>Guard: "Origin: India, Destination: France for 10 days"
-    Guard->>Guard: Check Prompt Injection, Weapons/Harm, Domain Boundary
-    Guard-->>Traveler: (If violation: Refuse with Security Alert)
-    
-    Guard->>Parser: Safe Query
-    Parser->>Parser: Extract Origin: India, Destination: France, Purpose: Tourism, Stay: 10d
-    Parser->>Memory: Update Session TripContext
-    
-    Parser->>CRAG: Evaluate & Retrieve(Query, Destination=France)
-    CRAG->>Retriever: Hybrid Search (Vector + BM25 + Boosts)
-    Retriever-->>CRAG: Ranked Scored Documents
-    CRAG->>CRAG: Check Relevance Threshold (0.35)
-    alt Low Confidence
-        CRAG->>Retriever: Corrective Query Reformulation Search
-        Retriever-->>CRAG: Expanded Evidence
+    %% STAGES
+    subgraph S1["STAGE 1: Security & Guardrails"]
+        direction TB
+        Q["User Query Received"]:::step --> G{"Input Guardrail"}:::branch
+        G -->|Harmful / Jailbreak| R1["🛑 Security Policy Alert"]:::reject
+        G -->|Out of Domain| R2["ℹ️ Travel Domain Redirection"]:::reject
+        G -->|Legitimate Travel / Follow-up| P["Pass to Parser"]:::pass
     end
 
-    CRAG->>LLM: Formatted XML Context + Trip Context + Grounding Rules
-    LLM-->>Traveler: Streamed Answer Tokens (Progressive)
-    
-    LLM->>OutGuard: Full Raw Answer
-    OutGuard->>OutGuard: Check Groundedness, Hallucinations, Append Disclaimer
-    OutGuard->>Memory: Persist Turn + Citations
-    OutGuard-->>Traveler: Verified Sources Drawer + Travel Readiness Score + Why-This-Answer
+    subgraph S2["STAGE 2: Query Understanding"]
+        direction TB
+        P --> Parse["Extract Trip Parameters"]:::step
+        Parse --> Ctx["Structured Context:<br>• Origin Country<br>• Destination Country<br>• Purpose & Duration<br>• Question Type"]:::step
+    end
+
+    subgraph S3["STAGE 3: Hybrid Retrieval & CRAG"]
+        direction TB
+        Ctx --> Ret["⚡ Hybrid Retrieval<br><i>FAISS + BM25 + Boost</i>"]:::step
+        Ret --> Eval{"Relevance Score >= 0.35?"}:::branch
+        Eval -->|Weak Evidence| Retry["🔄 Query Reformulation & 2nd Retrieval"]:::step
+        Retry --> Ret
+        Eval -->|High Confidence| Docs["Grounded Documents"]:::pass
+        Eval -->|No Data Available| Fallback["⚠️ Safe No-Evidence Notice"]:::reject
+    end
+
+    subgraph S4["STAGE 4: LLM Generation & Self-RAG"]
+        direction TB
+        Docs --> Gen["🤖 LLM Generation<br><i>Streamed Factual Response</i>"]:::step
+        Gen --> Val{"Self-RAG Grounding"}:::branch
+        Val -->|Grounded| Out["Sanitized Answer + Disclaimer"]:::pass
+        Val -->|Hallucination Detected| Fallback
+    end
+
+    subgraph S5["STAGE 5: Output Assembly"]
+        direction TB
+        Out --> Res["Render to UI:<br>• 💬 Progressive Answer<br>• 📊 Travel Readiness Score<br>• 📚 Verified Source Links<br>• 🔍 'Why this answer?'"]:::pass
+    end
+
+    %% Inter-stage connections
+    S1 ==> S2
+    S2 ==> S3
+    S3 ==> S4
+    S4 ==> S5
 ```
 
-### Detailed Flow Steps:
+---
 
-1. **Input Guardrail Check (`app/guardrails/input_guardrail.py`)**:
-   - Inspects for prompt injection (`ignore previous instructions`, `DAN mode`), hazardous requests (explosives, weapons), and border evasion (illegal crossing, fake passports).
-   - Allows natural conversational follow-ups (`"10 days"`, `"tourism"`, `"what documents?"`) when active trip context exists.
+### 📋 Step-by-Step Breakdown
 
-2. **Query Understanding (`app/rag/query_understanding.py`)**:
-   - Parses structured travel entities: `origin_country`, `destination_country`, `travel_purpose`, `duration`, `travel_date`, and `question_type`.
-   - Supports both conversational sentences and key-value inputs (`Origin: India, Destination: UK`).
-
-3. **Hybrid Retrieval (`app/rag/hybrid_retriever.py`)**:
-   - Dense semantic vector search via **FAISS** (`text-embedding-3-small`).
-   - Sparse keyword search via **BM25Okapi**.
-   - Non-stopword Jaccard lexical overlap computation.
-   - Metadata boost applied for exact destination matches.
-
-4. **Corrective RAG (`app/rag/corrective_rag.py`)**:
-   - Measures candidate relevance against `RELEVANCE_THRESHOLD=0.35`.
-   - If confidence is low or documents are sparse, reformulates the query and triggers secondary retrieval.
-   - Prevents hallucinations by returning an explicit insufficient-evidence notice if no authoritative knowledge exists.
-
-5. **Self-RAG Grounding & Output Guardrails (`app/guardrails/output_guardrail.py` & `app/rag/grounding_checker.py`)**:
-   - Validates generated fees and numbers against retrieved text.
-   - Attaches official immigration verification notices while suppressing them on security refusals.
-
-6. **Travel Readiness Scoring (`app/rag/readiness_calculator.py`)**:
-   - Computes an informational 0–100% readiness score evaluating Visa Category, Document Checklist, Passport Validity, Timeline, and Arrival Formalities.
-
-7. **Explainability (`Why this answer?`)**:
-   - Displays parsed parameters, candidate chunk counts, relevance pass rates, and source citations without exposing private system prompts.
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. INPUT SAFETY CHECK                                                                  │
+│    • Prompt Injection (e.g. "Ignore instructions", "DAN mode") ──► Refusal Alert       │
+│    • Dangerous / Hazardous Requests (e.g. explosives, weapons) ──► Policy Alert        │
+│    • Illegal Evasion (e.g. fake passports, border evasion)    ──► Safety Alert         │
+│    • Conversational Context Tolerance (e.g. "10 days", "UK")   ──► Permitted           │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ 2. ENTITY PARSING & MEMORY                                                             │
+│    • Extracts: Origin 🇮🇳 India ➔ Destination 🇫🇷 France | Tourism | 10 days             │
+│    • Updates isolated user session state (`SessionMemory`)                             │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ 3. HYBRID RETRIEVAL (Vector + BM25 + Lexical)                                          │
+│    • Score = (0.60 * Vector) + (0.30 * BM25) + (0.10 * Lexical) * DestinationBoost    │
+│    • Filters documents matching destination country                                    │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ 4. CORRECTIVE RAG (CRAG) EVALUATION                                                    │
+│    • Checks candidate relevance against `RELEVANCE_THRESHOLD=0.35`                     │
+│    • If score is weak: Reformulates search query & executes secondary retrieval       │
+│    • If evidence is missing: Explicitly returns safe no-hallucination warning          │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ 5. SELF-RAG GROUNDING & OUTPUT GENERATION                                              │
+│    • Streams factual response progressively to Streamlit UI                            │
+│    • Checks for numerical or fee hallucinations against retrieved passages             │
+│    • Attaches official government verification notices                                 │
+│    • Computes 5-pillar Travel Readiness Score (0–100%)                                 │
+│    • Assembles "Why this answer?" explainability drawer                                │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
