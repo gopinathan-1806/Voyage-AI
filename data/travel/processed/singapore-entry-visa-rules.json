@@ -1,0 +1,31 @@
+{
+  "doc_id": "singapore-entry-visa-rules",
+  "title": "Singapore Entry Requirements, Visa & SG Arrival Card",
+  "destination_country": "Singapore",
+  "origin_country": "All",
+  "travel_purpose": "Tourism",
+  "document_type": "visa_information",
+  "content": "\n# Singapore Tourist Visa, Entry Rules & SG Arrival Card (SGAC)\n\n### Entry Framework\n- **Visa-Exempt Nationals**: Citizens of the United States, European Union, UK, Australia, Japan, and many ASEAN nations do not require an entry visa for tourist stays up to 30 or 90 days.\n- **Assessment Level I & II Countries**: Nationals of India, China, Russia, Nigeria, etc. require an entry visa before departing for Singapore.\n- **SG Arrival Card with Electronic Health Declaration**: ALL travellers (including Singapore citizens, PRs, and tourists) MUST submit the online SG Arrival Card within 3 days prior to arrival. The SG Arrival Card is 100% FREE of charge on the official ICA website.\n\n### Required Documents for Tourist Visa\n1. **Valid Passport**: Valid for at least 6 months beyond the date of arrival in Singapore.\n2. **Form 14A**: Completed and signed application form.\n3. **Passport Photo**: Recent passport-sized color photograph with white background taken within last 3 months.\n4. **Flight & Hotel Bookings**: Confirmed round-trip tickets and hotel reservations.\n5. **Letter of Introduction (LOI)**: Form V39A issued by a Singapore citizen or Permanent Resident (or applied through an authorized visa agent).\n6. **Processing Fee**: SGD $30 (non-refundable) + authorized agent service fee.\n\n### Visa Processing Time\n- Processing Time: 1 to 3 working days via the Immigration & Checkpoints Authority (ICA) e-Services.\n\n### SG Arrival Card (Mandatory for All)\n- Submission Window: Within 3 days before arriving in Singapore (including arrival day).\n- Cost: Free. Beware of commercial scam sites charging fees for SGAC.\n- Portal: Official ICA website (eservices.ica.gov.sg/sgarrivalcard) or MyICA Mobile App.\n\n### Border Requirements\n- Minimum 6 months passport validity.\n- Approved Singapore eVisa (if applicable).\n- SG Arrival Card acknowledgement email/barcode.\n- Proof of sufficient funds and confirmed return/onward tickets.\n        ",
+  "source_name": "Immigration & Checkpoints Authority (ICA Singapore)",
+  "source_url": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore",
+  "source_type": "government",
+  "visa_type": "Entry Visa (e-Visa) & SG Arrival Card",
+  "eligibility": "Foreign travellers visiting Singapore for tourism or social visits.",
+  "required_documents": [
+    "Passport (valid 6+ months)",
+    "Completed Form 14A",
+    "Passport photograph (white background)",
+    "Round-trip flight booking",
+    "Hotel reservation",
+    "SG Arrival Card submission (within 3 days of arrival)"
+  ],
+  "application_process": "1. Apply via ICA Authorized Visa Agent or Singapore Citizen sponsor on SAVE portal. 2. Submit SG Arrival Card 3 days before flight. 3. Enter via automated lanes or passport control.",
+  "fees": "SGD $30 ICA official fee + agent fee.",
+  "processing_time": "1 to 3 business days.",
+  "entry_requirements": "Valid passport (6 months), eVisa (if required), SG Arrival Card submission, return ticket.",
+  "transit_requirements": null,
+  "passport_requirements": "Minimum 6 months validity from entry date.",
+  "last_updated": "2024-11-20",
+  "retrieved_at": "2026-09-06T17:01:57.824565",
+  "content_hash": "23e6f77f851569f0e169fcf8677f45a8d7b980949d5b0115f2ea670b4e167105"
+}

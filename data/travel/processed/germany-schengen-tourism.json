@@ -1,0 +1,33 @@
+{
+  "doc_id": "germany-schengen-tourism",
+  "title": "Germany Schengen Tourist Visa & Entry Requirements",
+  "destination_country": "Germany",
+  "origin_country": "All",
+  "travel_purpose": "Tourism",
+  "document_type": "visa_information",
+  "content": "\n# Germany Schengen Visitor / Tourist Visa (Category C)\n\n### Visa Summary\nFor citizens of third countries requiring a visa (including India, China, Philippines, Nigeria), a German Schengen visa is mandatory for tourist, recreational, or private visits for stays up to 90 days within any 180-day period.\n\n### Core Eligibility\n- Germany must be the sole or main destination (longest duration of stay) in the Schengen area.\n- Applicant must demonstrate stable socio-economic ties to their country of residence.\n\n### Required Application Documents\n1. **National Passport**: Valid for at least 3 months after intended departure from Germany, issued within the last 10 years, with at least 2 consecutive blank pages.\n2. **VIDEX Application Form**: Completed and signed VIDEX electronic visa application form with declaration section.\n3. **Biometric Photos**: 2 identical recent biometric passport photos (35x45mm) meeting German consular biometric criteria.\n4. **Travel Health Insurance**: Minimum €30,000 coverage for emergency hospital treatments and repatriation, valid in all 29 Schengen states.\n5. **Proof of Financial Resources**: Recent bank statements (last 3 months with official bank seal/stamp), income tax returns (ITR/Form 16), or a formal obligation letter ('Verpflichtungserklärung') if sponsored by a German resident.\n6. **Proof of Accommodation & Flight Plan**: Confirmed round-trip flight booking and hotel reservation across entire stay.\n7. **Cover Letter & Detailed Itinerary**: Outlining day-by-day travel plan inside Germany.\n8. **Proof of Employment**: Leave approval letter from employer, salary slips, or business registration if self-employed.\n\n### Fees\n- Regular Visa Fee: €90 for adults.\n- Minors (6-12 years): €45.\n- Minors under 6: Free.\n- Third-party service fee (VFS Global / TLScontact): around €30.\n\n### Processing Timelines\n- Standard decision time: Approximately 15 calendar days after biometric capture.\n- Early applications: Can be submitted up to 6 months prior to trip. Recommended minimum 3-4 weeks in advance.\n\n### Border Formalities\n- Present passport with valid Schengen visa.\n- Border authorities (Bundespolizei) at Frankfurt, Munich, Berlin or other points of entry may request proof of health insurance and return ticket.\n        ",
+  "source_name": "Federal Foreign Office - Germany (Auswärtiges Amt)",
+  "source_url": "https://www.auswaertiges-amt.de/en/visa-service",
+  "source_type": "government",
+  "visa_type": "Schengen Visa Category C (Tourist)",
+  "eligibility": "Foreign nationals requiring visa whose primary Schengen destination is Germany.",
+  "required_documents": [
+    "Valid Passport with 3+ months validity post-trip",
+    "Signed VIDEX visa application form",
+    "2 Biometric photographs",
+    "Travel Medical Insurance (€30,000 minimum)",
+    "Bank statements (3 months with bank stamp)",
+    "Confirmed hotel reservations and flight itinerary",
+    "Cover letter with daily itinerary",
+    "Employer leave sanction letter"
+  ],
+  "application_process": "1. Fill VIDEX form. 2. Book appointment at German Visa Application Centre. 3. Submit biometric data and documents. 4. Collection upon decision.",
+  "fees": "€90 (Adults), €45 (Children 6-12)",
+  "processing_time": "15 calendar days (can extend to 45 in peak periods)",
+  "entry_requirements": "Valid passport, Schengen visa, travel insurance, proof of accommodation.",
+  "transit_requirements": null,
+  "passport_requirements": "Valid at least 3 months beyond intended departure date, 2 blank pages, issued within 10 years.",
+  "last_updated": "2024-10-20",
+  "retrieved_at": "2026-09-06T17:01:57.824540",
+  "content_hash": "87160b7770ad1acf81e00ddbec8603515d5243f7736e1810904385aefe046f06"
+}

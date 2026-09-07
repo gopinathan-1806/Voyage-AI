@@ -1,0 +1,30 @@
+{
+  "doc_id": "uae-tourist-visa-entry",
+  "title": "United Arab Emirates (UAE/Dubai) Tourist Visa & Entry Regulations",
+  "destination_country": "UAE",
+  "origin_country": "All",
+  "travel_purpose": "Tourism",
+  "document_type": "visa_information",
+  "content": "\n# UAE (Dubai, Abu Dhabi) Tourist Visa & Entry Regulations\n\n### Visa Framework\n- **Visa on Arrival / Visa Free**: GCC nationals, EU citizens, UK, US, Australia, and select countries receive free 30-day or 90-day visa on arrival.\n- **Pre-Arranged Tourist Visa**: Indian citizens with normal passports (unless holding a valid US visa/green card or UK/EU residency) and citizens of non-exempt countries must obtain a pre-arranged tourist visa before arrival through airlines (Emirates, flydubai, Etihad), hotels, travel agencies, or the GDRFA / ICP portals.\n- **Special Rule for Indian Citizens**: Indian citizens with a normal passport valid for at least 6 months holding a US visa/green card or UK/EU residence permit (valid for minimum 6 months) are eligible for a 14-day Visa on Arrival (extendable) at all UAE ports of entry for an issuance fee of approximately AED 120-140.\n\n### Pre-Arranged Visa Types\n1. **30-Day Single / Multiple Entry Tourist Visa**: For short leisure visits.\n2. **60-Day Single / Multiple Entry Tourist Visa**: Standard tourist stay.\n3. **5-Year Multiple Entry Tourist Visa**: Allows stays up to 90 days per visit, extendable up to 180 days total per year.\n\n### Required Documents\n1. **Passport Copy**: Clear color copy of passport bio-pages (minimum 6 months validity from date of arrival).\n2. **Passport Photo**: White background color photograph.\n3. **Confirmed Return Ticket**: Round-trip flight with onward travel proof.\n4. **Hotel Booking or Host Details**: Confirmed hotel reservation or address of host resident in UAE.\n5. **Financial Capacity**: For 5-year visa: bank balance proof of $4,000 USD (or equivalent) in the last 6 months.\n\n### Fees\n- 30-Day Tourist Visa: Approx. AED 250 - AED 350 (~$70 - $95 USD) plus service fees.\n- 60-Day Tourist Visa: Approx. AED 500 - AED 650 (~$135 - $175 USD).\n- 14-Day VoA for qualifying Indian passport holders: ~AED 120-140.\n\n### Processing Time\n- Pre-arranged eVisa: 24 to 72 hours (1 to 3 working days). Express processing available within 24 hours.\n\n### Passport & Entry Requirements\n- Passport must be valid for at least 6 months from the date of entry into the UAE.\n        ",
+  "source_name": "Federal Authority for Identity, Citizenship, Customs and Port Security (ICP)",
+  "source_url": "https://icp.gov.ae/en/",
+  "source_type": "government",
+  "visa_type": "Pre-arranged Tourist Visa / Visa on Arrival",
+  "eligibility": "International tourists entering Dubai, Abu Dhabi, or other UAE emirates.",
+  "required_documents": [
+    "Passport copy (valid 6+ months)",
+    "White background passport photo",
+    "Confirmed return flight ticket",
+    "Hotel accommodation confirmation",
+    "Valid US/UK/EU visa copy (if applying for VoA facility)"
+  ],
+  "application_process": "Apply online via GDRFA Dubai / ICP portal or through airline (Emirates/Etihad) / authorized travel provider.",
+  "fees": "30-day: ~AED 250-350; 60-day: ~AED 500-650; VoA facility: ~AED 140.",
+  "processing_time": "24 to 72 hours (1 to 3 business days).",
+  "entry_requirements": "Valid passport (6 months validity), eVisa approval printout or VoA eligibility, return ticket.",
+  "transit_requirements": null,
+  "passport_requirements": "Minimum 6 months validity from date of arrival.",
+  "last_updated": "2024-11-01",
+  "retrieved_at": "2026-09-06T17:01:57.824561",
+  "content_hash": "5df42018c2751006521f51c7e0b04d6ca62fb2e91f43a28f881e52b9645583e5"
+}

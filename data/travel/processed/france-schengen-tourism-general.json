@@ -1,0 +1,32 @@
+{
+  "doc_id": "france-schengen-tourism-general",
+  "title": "France Short-Stay Schengen Tourist Visa (Type C) Guide",
+  "destination_country": "France",
+  "origin_country": "All",
+  "travel_purpose": "Tourism",
+  "document_type": "visa_information",
+  "content": "\n# France Short-Stay Schengen Visa (Type C) Official Information\n\n### Visa Overview\nCitizens of non-EU/EEA countries who are not visa-exempt (such as citizens of India, China, South Africa, etc.) require a Short-Stay Schengen Visa (Uniform Schengen Visa, Type C) to enter France and the Schengen Area for tourism, visiting family, or short business stays. A Type C visa allows stays of up to 90 days in any 180-day period.\n\n### Eligibility & General Criteria\n- The main travel destination or the point of first longest stay in the Schengen Area must be France.\n- Intended stay must not exceed 90 days in any 180-day window.\n- Applicants must prove financial sufficiency, intention to return to home country, and genuine travel purpose.\n\n### Required Documents\n1. **Valid Passport**: Issued within the last 10 years, with at least 3 months validity beyond the scheduled departure date from the Schengen area, and at least 2 blank pages.\n2. **Completed Application Form**: Filled online on the official France-Visas portal and signed.\n3. **Photographs**: Two recent standard ICAO/ISO-compliant passport photos (35x45mm, light grey or plain background).\n4. **Travel Medical Insurance**: Minimum medical coverage of €30,000 covering emergency medical care, hospitalization, and repatriation across the entire Schengen zone.\n5. **Proof of Accommodation**: Hotel bookings, rental contract, or an official 'Attestation d'accueil' issued by the French town hall if staying with a resident.\n6. **Round-Trip Itinerary**: Flight reservations or itinerary showing entry and exit dates from Schengen territory.\n7. **Proof of Financial Means**: Bank statements for the last 3-6 months showing adequate funds (€120/day if no hotel booking, €65/day with hotel booking, €32.50/day with attestation d'accueil), pay slips, or employment proof.\n8. **Employment/Student Proof**: Letter from employer granting leave or enrollment certificate.\n\n### Fees & Charges\n- Standard Adult Visa Fee: €90 (updated Schengen standard fee).\n- Children aged 6–12: €45.\n- Children under 6: Free.\n- Additional external visa service provider fees (e.g., VFS Global) apply (typically €30–€40).\n\n### Processing Time\n- Standard processing time: 15 calendar days from the date of submission at the visa centre.\n- During peak travel seasons (May-August, December), applications can take up to 30 to 45 days.\n- Applications can be lodged up to 6 months before the intended travel date.\n\n### Entry & Border Requirements\n- Valid passport and Schengen visa.\n- Boarding officers and French border police (Police aux Frontières) may request to inspect the travel insurance certificate, return ticket, and proof of funds upon arrival at French ports of entry.\n        ",
+  "source_name": "France-Visas (Official French Visa Portal)",
+  "source_url": "https://france-visas.gouv.fr/",
+  "source_type": "government",
+  "visa_type": "Short-Stay Schengen Type C",
+  "eligibility": "Non-visa-exempt foreign nationals visiting France for tourism up to 90 days.",
+  "required_documents": [
+    "Passport (valid 3+ months post-departure)",
+    "France-Visas application form",
+    "Schengen Travel Insurance (€30,000 coverage)",
+    "Proof of Accommodation / Hotel reservation",
+    "Round-trip flight itinerary",
+    "Bank statements (last 3-6 months)",
+    "Employment / Leave certificate"
+  ],
+  "application_process": "1. Register on France-Visas portal. 2. Complete online application. 3. Book appointment at VFS Global centre. 4. Submit biometrics and documents. 5. Track passport return.",
+  "fees": "€90 for adults; €45 for children 6-12; free for under 6.",
+  "processing_time": "15 to 45 calendar days depending on season.",
+  "entry_requirements": "Valid passport, Schengen Type C visa, travel insurance, proof of accommodation, and financial means.",
+  "transit_requirements": null,
+  "passport_requirements": "Issued within 10 years, minimum 3 months validity beyond Schengen departure, 2 blank pages.",
+  "last_updated": "2024-11-15",
+  "retrieved_at": "2026-09-06T17:01:57.824130",
+  "content_hash": "d2fabc20f0082431040f2a3b77c7768aa023fe41246d6a729f9154efa17c85ab"
+}

@@ -1,0 +1,31 @@
+{
+  "doc_id": "japan-tourist-evisa-rules",
+  "title": "Japan Short-Term Tourist Visa & Visit Japan Web Requirements",
+  "destination_country": "Japan",
+  "origin_country": "All",
+  "travel_purpose": "Tourism",
+  "document_type": "visa_information",
+  "content": "\n# Japan Tourist Visa & Short-Term Stay Guidelines\n\n### Visa Overview\n- **Visa Exemption**: Citizens of 71 countries (including US, UK, Canada, Australia, Singapore, EU member states) can enter Japan visa-free for tourism stays up to 90 days.\n- **eVisa Eligibility**: Nationals of select countries (including India, Brazil, UAE, Saudi Arabia, Taiwan, etc. residing in eligible jurisdictions) can apply for a single-entry electronic visa (eVisa) for tourism stays up to 90 days via the JAPAN eVISA website.\n- **Paper Application**: Other applicants submit physical applications via Japanese embassies/consulates or accredited agencies (VFS Global).\n\n### Required Documents for Japan Tourist Visa\n1. **Valid Passport**: Valid for duration of stay with at least 2 blank pages.\n2. **Visa Application Form**: With 2x2 inch photo attached.\n3. **Detailed Travel Schedule / Itinerary**: Daily plan of activities in Japan including hotel contact details.\n4. **Proof of Financial Standing**: Recent bank statements (3-6 months), income tax certificate / returns.\n5. **Employment / Leave Letter**: Proof of occupation and approved vacation leave.\n6. **Flight Reservations**: Confirmed flight itinerary to and from Japan.\n7. **Accommodation Proof**: Confirmed hotel vouchers.\n\n### Fees\n- Single Entry Visa: JPY 3,000 (or equivalent in local currency, approx. $20-25 USD).\n- Double/Multiple Entry: JPY 6,000.\n- Transit Visa: JPY 700.\n- Agency processing fees may apply.\n\n### Processing Times\n- Standard processing: 5 working days from submission of all required documents.\n\n### Visit Japan Web\n- Highly recommended online digital service (vjw-lp.digital.go.jp) to complete Immigration clearance (Disembarkation Card) and Customs Declaration QR code prior to boarding.\n        ",
+  "source_name": "Ministry of Foreign Affairs of Japan (MOFA)",
+  "source_url": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+  "source_type": "government",
+  "visa_type": "Short-Term Tourist Visa (Single/Multiple) / JAPAN eVISA",
+  "eligibility": "Foreign tourists traveling to Japan for recreational and sightseeing purposes.",
+  "required_documents": [
+    "Valid passport with 2 blank pages",
+    "Visa Application form with photo (45x35mm or 2x2 in)",
+    "Day-by-day Itinerary in Japan (Form Schedule of Stay)",
+    "Bank statements (last 3-6 months)",
+    "Income tax certificates",
+    "Flight reservations and hotel vouchers"
+  ],
+  "application_process": "1. Apply online via JAPAN eVISA or via accredited agency (VFS). 2. Submit documents and pay visa fee. 3. Receive digital visa issuance notice. 4. Complete Visit Japan Web QR.",
+  "fees": "JPY 3,000 (~$22 USD) for single entry visa.",
+  "processing_time": "5 working days.",
+  "entry_requirements": "Valid passport, valid visa / eVisa, customs declaration via Visit Japan Web QR.",
+  "transit_requirements": null,
+  "passport_requirements": "Valid for intended duration of stay.",
+  "last_updated": "2024-10-15",
+  "retrieved_at": "2026-09-06T17:01:57.824569",
+  "content_hash": "0b841e8dca5deb947638f3e9d77e77a2d51613dc6e6d9aeeb81ec38d28733b22"
+}

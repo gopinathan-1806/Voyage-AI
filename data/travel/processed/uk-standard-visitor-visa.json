@@ -1,0 +1,31 @@
+{
+  "doc_id": "uk-standard-visitor-visa",
+  "title": "UK Standard Visitor Visa Official Guide",
+  "destination_country": "United Kingdom",
+  "origin_country": "All",
+  "travel_purpose": "Tourism",
+  "document_type": "visa_information",
+  "content": "\n# UK Standard Visitor Visa (Tourism, Family, Short Business)\n\n### Visa Overview\nNon-visa nationals (EU, US, Australia, Canada, Japan) can enter the UK for tourism without a visa for up to 6 months (subject to ETA requirements). Visa-national citizens (India, China, Pakistan, South Africa, etc.) must apply for a UK Standard Visitor Visa before travelling. A Standard Visitor visa permits stays of up to 6 months for leisure, holiday, visiting friends/family, or participating in permitted business activities.\n\n### Eligibility Criteria\n- You must show that you will leave the UK at the end of your visit.\n- You are able to support yourself and any dependents without working or accessing public funds.\n- You can pay for your return or onward journey.\n- You cannot do paid work, live in the UK through frequent visits, or marry (without a Marriage Visitor visa).\n\n### Mandatory Documents\n1. **Current Valid Passport**: Must have at least one blank page for the visa sticker (vignette). Must be valid for the duration of the stay in the UK.\n2. **Online Application**: Submitted via the official GOV.UK portal.\n3. **Financial Evidence**: Bank statements, payslips, or financial sponsor evidence demonstrating sufficient funds to cover all costs during the visit.\n4. **Employment & Status**: Letter from employer specifying job title, salary, length of employment, and approved leave of absence.\n5. **Accommodation & Travel Details**: Details of where you intend to stay (hotel bookings or invitation letter and proof of address from UK host).\n6. **Tuberculosis (TB) Test**: Required only if residing in specific listed countries and applying for a stay longer than 6 months (not required for 6-month standard tourist visitor).\n\n### Fees\n- 6-Month Standard Visitor Visa: £115.\n- 2-Year Long-Term Visitor Visa: £432.\n- 5-Year Long-Term Visitor Visa: £771.\n- 10-Year Long-Term Visitor Visa: £963.\n- Priority Service (5 working days): £500 additional.\n- Super Priority Service (next working day): £1,000 additional.\n\n### Processing Times\n- Standard processing: 3 weeks (15 working days) from biometric appointment date at VFS Global / TLScontact.\n\n### Entry Notes\n- Passports must be valid for the whole of your stay in the UK.\n- Electronic Travel Authorisation (ETA): UK is phasing in ETA for visa-free travellers starting 2024-2025.\n        ",
+  "source_name": "GOV.UK Visas and Immigration (UKVI)",
+  "source_url": "https://www.gov.uk/standard-visitor",
+  "source_type": "government",
+  "visa_type": "Standard Visitor Visa (6 Months)",
+  "eligibility": "Nationals requiring entry clearance for tourism, family visits, or permitted activities in the UK.",
+  "required_documents": [
+    "Valid passport with at least 1 blank page",
+    "Online GOV.UK application form",
+    "Bank statements (last 6 months recommended)",
+    "Proof of employment and leave permission",
+    "Accommodation details / UK host letter",
+    "Travel itinerary"
+  ],
+  "application_process": "1. Apply on GOV.UK. 2. Pay visa fee. 3. Book biometric appointment at visa centre. 4. Attend biometrics & submit documents. 5. Receive decision & passport.",
+  "fees": "£115 for 6-month visa.",
+  "processing_time": "3 weeks (15 working days).",
+  "entry_requirements": "Valid passport and UK entry clearance vignette / visa.",
+  "transit_requirements": null,
+  "passport_requirements": "Valid for the whole of your stay in the UK.",
+  "last_updated": "2024-12-01",
+  "retrieved_at": "2026-09-06T17:01:57.824551",
+  "content_hash": "957b154c5b537b55a7e85a51e2d18020af777f6f3fdbf292546c10c1f0dcc5b9"
+}

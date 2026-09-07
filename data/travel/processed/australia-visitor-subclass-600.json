@@ -1,0 +1,31 @@
+{
+  "doc_id": "australia-visitor-subclass-600",
+  "title": "Australia Visitor Visa Subclass 600 Tourist Stream Guide",
+  "destination_country": "Australia",
+  "origin_country": "All",
+  "travel_purpose": "Tourism",
+  "document_type": "visa_information",
+  "content": "\n# Australia Visitor Visa (Subclass 600) - Tourist Stream\n\n### Visa Summary\nThe Visitor Visa Subclass 600 (Tourist stream applied outside Australia) is for individuals wishing to visit Australia for holidays, sightseeing, social or recreational reasons, or to visit friends and family for up to 3, 6, or 12 months.\n\n### Eligibility Requirements\n- **Genuine Temporary Entrant (GTE)**: Must satisfy the Department of Home Affairs that you genuinely intend to stay temporarily and will abide by visa conditions.\n- **Financial Stability**: Have access to sufficient funds to support your stay in Australia.\n- **Health & Character**: Meet Australia's strict health (chest x-ray/medical exam if required) and character requirements (police clearance if requested).\n\n### Required Documents\n1. **Valid Passport**: Clear color copy of passport identification pages. Minimum 6 months validity recommended.\n2. **Financial Evidence**: Bank statements (last 3 months), savings history, tax returns, pay slips.\n3. **Employment Evidence**: Letter from employer confirming position, salary, leave approval, and return to employment.\n4. **Travel Plan**: Planned itinerary, tourist activities, and accommodation details.\n5. **Ties to Home Country**: Evidence of immediate family, property ownership, business ownership, or ongoing studies.\n6. **Biometrics**: Required in certain countries (including India) - applicant receives a Biometric Requirement Letter to attend a collection centre (VFS).\n\n### Application Fee\n- Subclass 600 Base Fee: AUD $190.\n- Biometric collection fee at VFS (if applicable): ~AUD $25-35.\n\n### Processing Times\n- 25% of applications: within 7 days.\n- 50% of applications: within 15 days.\n- 75% of applications: within 26 days.\n- 90% of applications: within 37 days.\n\n### Entry Conditions\n- Visa Condition 8101: No work allowed.\n- Visa Condition 8201: Maximum 3 months study allowed.\n- Mandatory Incoming Passenger Card (IPC) declaration on arrival.\n        ",
+  "source_name": "Department of Home Affairs - Australian Government",
+  "source_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600",
+  "source_type": "government",
+  "visa_type": "Visitor Visa Subclass 600 (Tourist Stream)",
+  "eligibility": "Foreign nationals wishing to visit Australia for tourism, recreation, or family visits.",
+  "required_documents": [
+    "Passport bio-page color scan",
+    "Bank statements and financial evidence",
+    "Employer leave approval letter and salary slips",
+    "Proof of assets/ties to home country",
+    "Detailed trip itinerary and accommodation",
+    "Biometric collection appointment"
+  ],
+  "application_process": "1. Create ImmiAccount online. 2. Complete Subclass 600 form and attach documents. 3. Pay AUD $190. 4. Complete biometrics if requested. 5. Receive digital grant notice.",
+  "fees": "AUD $190.",
+  "processing_time": "15 to 37 calendar days.",
+  "entry_requirements": "Valid passport, granted electronic Subclass 600 visa, completed Incoming Passenger Card.",
+  "transit_requirements": null,
+  "passport_requirements": "Valid for duration of stay, recommended 6 months validity.",
+  "last_updated": "2024-11-10",
+  "retrieved_at": "2026-09-06T17:01:57.824573",
+  "content_hash": "2098e492885557b3e1a94a5d9b942ea66f8763c14532bba3cf4ec9af32c2b42e"
+}

@@ -1,0 +1,31 @@
+{
+  "doc_id": "us-b1-b2-tourist-visa",
+  "title": "United States B1/B2 Nonimmigrant Visitor Visa",
+  "destination_country": "United States",
+  "origin_country": "All",
+  "travel_purpose": "Tourism",
+  "document_type": "visa_information",
+  "content": "\n# United States B1/B2 Visitor Visa for Tourism & Business\n\n### Visa Overview\nCitizens of foreign countries traveling to the United States for tourism, vacation, visiting family, or medical treatment require a B-2 visa (or combined B-1/B-2 visitor visa), unless eligible for the Visa Waiver Program (ESTA). Stays are granted up to 6 months per entry by U.S. Customs and Border Protection (CBP) at the port of entry.\n\n### Eligibility Criteria\nUnder Section 214(b) of the Immigration and Nationality Act (INA), every applicant is presumed to be an intending immigrant until overcoming this presumption by proving:\n- The purpose of trip is a temporary visit for pleasure or medical treatment.\n- They intend to remain for a specific, limited period.\n- Residence outside the U.S. and binding social/economic ties ensuring their return home.\n- Sufficient financial funds to cover all expenses.\n\n### Required Application Documents\n1. **Valid Passport**: Valid for travel to the U.S. with validity date at least 6 months beyond intended stay (unless country is exempt via Six-Month Club).\n2. **Form DS-160 Confirmation Page**: Online Nonimmigrant Visa Application confirmation barcode.\n3. **Application Fee Payment Receipt**: Machine Readable Visa (MRV) fee receipt.\n4. **Photo**: 2x2 inches (51x51mm) color photo taken within the last 6 months complying with Department of State specs.\n5. **Interview Appointment Confirmation**: Form showing scheduled VAC (biometrics) and Consular interview appointments.\n6. **Supporting Documentation** (brought to interview):\n   - Proof of income, tax payments, property ownership, or business assets.\n   - Travel itinerary and/or explanation of planned trip.\n   - Letter from employer detailing position, salary, and authorized leave.\n\n### Visa Fee\n- Nonimmigrant Visa Application Fee (MRV): $185 USD (non-refundable).\n\n### Processing & Appointment Times\n- Wait times for consular interview appointments vary heavily by location and season (ranging from several weeks to several months).\n- Passport return following approved interview: 3 to 7 business days.\n\n### Port of Entry Requirements\n- A visa does not guarantee entry into the U.S. CBP officers at port of entry determine eligibility and length of authorized stay (Form I-94).\n        ",
+  "source_name": "U.S. Department of State - Bureau of Consular Affairs",
+  "source_url": "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html",
+  "source_type": "government",
+  "visa_type": "B1/B2 Visitor Visa",
+  "eligibility": "Non-U.S. citizens seeking temporary entry for tourism, family visits, or business.",
+  "required_documents": [
+    "Valid Passport (6+ months validity beyond stay)",
+    "DS-160 confirmation page with barcode",
+    "MRV fee receipt ($185 USD)",
+    "2x2 inch compliant photograph",
+    "Interview appointment letter",
+    "Financial statements, employment verification, ties to home country"
+  ],
+  "application_process": "1. Complete DS-160. 2. Pay $185 fee on appointment portal. 3. Schedule biometrics (OFC/VAC) and Consular interview. 4. Attend interviews. 5. Collect stamped passport.",
+  "fees": "$185 USD.",
+  "processing_time": "Interview wait times vary by embassy; passport issuance 3-7 days post-approval.",
+  "entry_requirements": "Valid US visa, passport, Form I-94 issued at border.",
+  "transit_requirements": null,
+  "passport_requirements": "Valid at least 6 months beyond intended stay period in the US.",
+  "last_updated": "2024-10-01",
+  "retrieved_at": "2026-09-06T17:01:57.824556",
+  "content_hash": "7e401f70725eb48d86252ee110b4f634eb25887458daff89108039b9588d6ff1"
+}
