@@ -31,59 +31,8 @@ Unlike simple wrapper chatbots, VoyageAI combines **Hybrid Search (Dense Vector 
 
 VoyageAI is organized into **4 clean modular layers** ensuring clear separation of concerns between ingestion, security, retrieval intelligence, and presentation.
 
-```mermaid
-flowchart TB
-    %% Styling definitions
-    classDef client fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
-    classDef security fill:#450a0a,stroke:#f87171,stroke-width:2px,color:#fef2f2;
-    classDef nlp fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#f8fafc;
-    classDef rag fill:#022c22,stroke:#34d399,stroke-width:2px,color:#f0fdf4;
-    classDef llm fill:#3b0764,stroke:#c084fc,stroke-width:2px,color:#faf5ff;
-    classDef data fill:#1c1917,stroke:#fbbf24,stroke-width:2px,color:#fefce8;
+<img width="1536" height="1024" alt="Voyage AI " src="https://github.com/user-attachments/assets/555d766e-0859-487f-9765-ee287a7ffeb3" />
 
-    subgraph L1["1. User & Client Interface Layer"]
-        UI["🖥️ Streamlit Premium UI<br><i>Live Streaming • Trip Cards • Readiness Gauge</i>"]:::client
-        Memory["🧠 Session Memory<br><i>Isolated Multi-Turn Store</i>"]:::client
-    end
-
-    subgraph L2["2. Security & Guardrails Layer"]
-        InGuard["🛡️ Input Guardrail & Injection Detector<br><i>Threat Filtering • Domain Validation</i>"]:::security
-        OutGuard["🛡️ Output Guardrail & Self-RAG<br><i>Grounding Checker • Disclaimer Enforcement</i>"]:::security
-    end
-
-    subgraph L3["3. Query & Retrieval Intelligence Layer"]
-        Parser["🧩 Query Understanding<br><i>Origin / Destination / Purpose Extraction</i>"]:::nlp
-        CRAG["🔄 Corrective RAG (CRAG) Engine<br><i>Relevance Evaluation • Self-Correction Loop</i>"]:::rag
-        Retriever["⚡ Hybrid Retriever<br><i>Dense Vector (60%) + Sparse BM25 (30%) + Lexical (10%)</i>"]:::rag
-        Readiness["📊 Readiness Calculator<br><i>5-Pillar Score (0-100%)</i>"]:::rag
-    end
-
-    subgraph L4["4. Knowledge Base & Model Layer"]
-        FAISS["📦 FAISS Vector Index<br><i>OpenAI Embeddings (1536-d)</i>"]:::data
-        BM25["📚 BM25Okapi Keyword Store<br><i>Exact Matches & Term Frequencies</i>"]:::data
-        LLM["🤖 LLM Generation Engine<br><i>OpenAI GPT-4o-mini / Local Grounded</i>"]:::llm
-    end
-
-    %% User Request Journey
-    UI -->|1. User Prompt| InGuard
-    InGuard -->|Safe Query| Parser
-    InGuard -.->|Security Violation| UI
-    
-    Parser -->|Trip Context| Memory
-    Parser -->|Structured Context| CRAG
-    
-    CRAG <-->|Hybrid Search| Retriever
-    Retriever <-->|Dense Search| FAISS
-    Retriever <-->|Keyword Search| BM25
-    
-    CRAG -->|Grounded XML Context| LLM
-    LLM -->|Streamed Output| OutGuard
-    OutGuard -->|Validated Answer + Sources| UI
-    CRAG -->|Evidence Documents| Readiness
-    Readiness -->|0-100% Score| UI
-
-    Memory -.->|Context History| Parser
-```
 
 ---
 
