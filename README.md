@@ -354,9 +354,12 @@ python -m app.evaluation.evaluator
 
 ---
 
-## 🗺️ Future Roadmap
+## Frontend 
 
-- [ ] **Multi-Agent Orchestration**: Integrate LangGraph for complex visa appeal and multi-destination itinerary workflows.
-- [ ] **Live Embassy Wait Times**: Real-time integration with VFS/TLS appointment tracking.
-- [ ] **Persistent Databases**: PostgreSQL / Redis backend adapters for `BaseSessionMemory`.
-- [ ] **Multilingual Support**: Real-time translation of authoritative government notices into 20+ languages.
+<img width="1268" height="567" alt="Screenshot 2026-09-07 at 12 13 15 PM" src="https://github.com/user-attachments/assets/74aeb6a8-7f5d-4183-8b3b-88c2d0ebb6ab" />
+<img width="1496" height="778" alt="Screenshot 2026-09-07 at 12 12 31 PM" src="https://github.com/user-attachments/assets/6324b3c3-d315-45ef-bf83-5d1fa7096ed6" />
+
+## Guardrail Validation for Unsafe User Queries
+
+<img width="1439" height="836" alt="Screenshot 2026-09-07 at 12 12 10 PM" src="https://github.com/user-attachments/assets/ac2b6b88-270b-42c7-9e09-d16feff7f55b" />
+
